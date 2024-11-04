@@ -1,6 +1,7 @@
 # dotnix
 
 Dotfiles and system setup using nix
+https://github.com/Baitinq/nixos-config
 
 ## Setup nix multiuser
 
