@@ -2,7 +2,7 @@
 let
   home-manager-shared = builtins.fetchGit {
     url = "https://github.com/MartinEllegard/home-manager-shared";
-    rev = "2319ad341a26546ecf750119a92932854539ef37";
+    rev = "9ab0c9811d8d3d2903214fdd12cf8e9d27ca10b0";
   };
 in
 {
