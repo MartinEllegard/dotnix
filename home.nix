@@ -1,6 +1,14 @@
 { config, pkgs, ... }:
-
+let
+  home-manager-shared = builtins.fetchGit {
+    url = "https://github.com/MartinEllegard/home-manager-shared";
+    rev = "2319ad341a26546ecf750119a92932854539ef37";
+  };
+in
 {
+  imports = [
+    (home-manager-shared + "/modules")
+  ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "martin";
@@ -28,12 +36,8 @@
     pkgs.wl-clipboard
     pkgs.xclip
 
-    pkgs.fish
-    pkgs.neovim
-    pkgs.lazygit
-    pkgs.lazydocker
-    pkgs.tmux
-
+    pkgs.gruvbox-gtk-theme
+    pkgs.gruvbox-plus-icons
 
     # Create nerd font
     (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
@@ -55,6 +59,17 @@
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
+
+    ".config/hypr".source = ./dotfiles/hypr;
+    ".config/waybar".source = ./dotfiles/waybar;
+    ".config/mako".source = ./dotfiles/mako;
+    ".config/wofi".source = ./dotfiles/wofi;
+
+    ".config/foot".source = ./dotfiles/foot;
+
+    ".config/gtk-3.0".source = ./dotfiles/gtk-3.0;
+    ".config/gtk-4.0".source = ./dotfiles/gtk-4.0;
+
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
