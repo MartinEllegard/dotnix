@@ -20,6 +20,14 @@
   home.packages = [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
+    pkgs.hyprland
+    pkgs.hyprpaper
+    pkgs.hyprlock
+    pkgs.hyprcursor
+    pkgs.mako
+    pkgs.wl-clipboard
+    pkgs.xclip
+
     pkgs.fish
     pkgs.neovim
     pkgs.lazygit
