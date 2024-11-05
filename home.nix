@@ -2,7 +2,7 @@
 let
   home-manager-shared = builtins.fetchGit {
     url = "https://github.com/MartinEllegard/home-manager-shared";
-    rev = "9ab0c9811d8d3d2903214fdd12cf8e9d27ca10b0";
+    rev = "b62717f96406530d414c60ce1cf16d0c619215f0";
   };
 in
 {
@@ -28,16 +28,20 @@ in
   home.packages = [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
-    pkgs.hyprland
-    pkgs.hyprpaper
-    pkgs.hyprlock
-    pkgs.hyprcursor
-    pkgs.mako
-    pkgs.wl-clipboard
-    pkgs.xclip
+
+    # IMPORTANT: These need to be downloaded by system
+    # pkgs.hyprland
+    # pkgs.hyprpaper
+    # pkgs.hyprlock
+    # pkgs.hyprcursor
+    # pkgs.mako
+    # pkgs.wl-clipboard
+    # pkgs.xclip
+    # pkgs.waybar
 
     pkgs.gruvbox-gtk-theme
     pkgs.gruvbox-plus-icons
+    pkgs.uv
 
     # Create nerd font
     (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
@@ -50,11 +54,22 @@ in
     # '')
   ];
 
-  programs.git = {
-    enable = true;
-    userName = "Martin Ellegård";
-    userEmail = "martin.ellegard@gmail.com";
+  programs = {
+    # hyprland.enable = true;
+    # hyprpaper.enable = true;
+    # hyprlock.enable = true;
+    # hyprcursor.enable = true;
+    git = {
+      enable = true;
+      userName = "Martin Ellegård";
+      userEmail = "martin.ellegard@gmail.com";
+    };
+    #fish.enable = true;
   };
+
+  # environment.shells = [
+  #   pkgs.fish
+  # ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.

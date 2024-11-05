@@ -8,6 +8,8 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # hyprland.url = "github:hyprwm/Hyprland";
   };
 
   outputs = { self, nixpkgs, home-manager, ... }:
@@ -35,6 +37,13 @@
         # Specify your home configuration modules here, for example,
         # the path to your home.nix.
         modules = [
+          # {
+          #   wayland.windowManager.hyprland = {
+          #     enable = true;
+          #     # set the flake package
+          #     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+          #   };
+          # }
           #configuration
           ./home.nix
         ];
