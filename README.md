@@ -1,20 +1,30 @@
 # dotnix
 
 Dotfiles and system setup using nix
-https://github.com/Baitinq/nixos-config
+<https://github.com/Baitinq/nixos-config>
 
 ## Setup nix multiuser
 
 ```bash
-ln nix/nix.conf ~/.config/nix/nix.conf
-ln nix-flakes/arch.nix ~/.config/home-manager/flake.nix
-ln nix-flakes/home.nix ~/.config/home-manager/home.nix
+# Install nix package manager
+sh <(curl -L https://nixos.org/nix/install) --daemon
+
+# Create nix config dir
+mkdir -p ~/.config/nix
+# Create nix.conf
+touch ~/.config/nix/nix.conf
+echo "experimental-features = nix-command flakes" >> ~/.config/nix/nix.conf
 ```
 
-## Setup initial links for nix
+## Setup repo
 
 ```bash
-ln nix/nix.conf ~/.config/nix/nix.conf
-ln nix-flakes/arch.nix ~/.config/home-manager/flake.nix
-ln nix-flakes/home.nix ~/.config/home-manager/home.nix
+mkdir -p .config/home-manager
+git clone https://github.com/martinellegard/dotnix.git ~/.config/home-manager
+```
+
+## Switch to current setup
+
+```bash
+nix --switch --flake ~/.config/home-manager
 ```
