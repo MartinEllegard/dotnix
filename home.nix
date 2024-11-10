@@ -42,6 +42,8 @@ in
     pkgs.gruvbox-gtk-theme
     pkgs.gruvbox-plus-icons
     pkgs.uv
+    pkgs.insomnia
+    pkgs.ripgrep
 
     # Create nerd font
     (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
