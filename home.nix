@@ -42,6 +42,7 @@
 
     pkgs.gruvbox-gtk-theme
     pkgs.gruvbox-plus-icons
+    pkgs.wezterm
     #pkgs.uv
     #pkgs.insomnia
     #pkgs.ripgrep
@@ -85,6 +86,7 @@
     ".config/wofi".source = ./dotfiles/wofi;
 
     ".config/foot".source = ./dotfiles/foot;
+    ".config/wezterm".source = ./dotfiles/wezterm;
 
     ".config/gtk-3.0".source = ./dotfiles/gtk-3.0;
     ".config/gtk-4.0".source = ./dotfiles/gtk-4.0;
