@@ -86,7 +86,8 @@
     ".config/wofi".source = ./dotfiles/wofi;
 
     ".config/foot".source = ./dotfiles/foot;
-    ".config/wezterm".source = ./dotfiles/wezterm;
+    ".config/wezterm/wezterm.lua".source = ./dotfiles/wezterm/wezterm.lua;
+    ".config/wezterm/keybindings-mac.lua".source = ./dotfiles/wezterm/keybindings-mac.lua;
 
     ".config/gtk-3.0".source = ./dotfiles/gtk-3.0;
     ".config/gtk-4.0".source = ./dotfiles/gtk-4.0;
