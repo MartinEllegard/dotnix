@@ -39,7 +39,25 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "shared-flake": "shared-flake"
+      }
+    },
+    "shared-flake": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1731278045,
+        "narHash": "sha256-Zsff4xLVXo0Hr5ANVJBp7BTLreAuPWAMSph4JsjRbkg=",
+        "owner": "MartinEllegard",
+        "repo": "home-manager-shared",
+        "rev": "86066c479e343ff3e3502f57148ef504cbf34fcd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "MartinEllegard",
+        "ref": "main",
+        "repo": "home-manager-shared",
+        "type": "github"
       }
     }
   },

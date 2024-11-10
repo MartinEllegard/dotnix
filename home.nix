@@ -1,14 +1,15 @@
-{ config, pkgs, ... }:
-let
-  home-manager-shared = builtins.fetchGit {
-    url = "https://github.com/MartinEllegard/home-manager-shared";
-    rev = "b62717f96406530d414c60ce1cf16d0c619215f0";
-  };
-in
+{ config, pkgs, inputs, ... }:
+# let
+#   home-manager-shared = inputs.shared-flak;
+#   #   builtins.fetchGit {
+#   #   url = "https://github.com/MartinEllegard/home-manager-shared";
+#   #   rev = "b62717f96406530d414c60ce1cf16d0c619215f0";
+#   # };
+# in
 {
-  imports = [
-    (home-manager-shared + "/modules")
-  ];
+  # imports = [
+  #   (inputs.shared-flake + "/modules")
+  # ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "martin";
@@ -41,9 +42,10 @@ in
 
     pkgs.gruvbox-gtk-theme
     pkgs.gruvbox-plus-icons
-    pkgs.uv
-    pkgs.insomnia
-    pkgs.ripgrep
+    #pkgs.uv
+    #pkgs.insomnia
+    #pkgs.ripgrep
+    pkgs.beekeeper-studio
 
     # Create nerd font
     (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
