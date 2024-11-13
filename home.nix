@@ -22,7 +22,8 @@
 
     pkgs.gruvbox-gtk-theme
     pkgs.gruvbox-plus-icons
-    pkgs.beekeeper-studio
+    #pkgs.beekeeper-studio
+    pkgs.obs-studio
 
     # Create nerd font
     (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
@@ -35,7 +36,6 @@
       userEmail = "martin.ellegard@gmail.com";
     };
   };
-
   # environment.shells = [
   #   pkgs.fish
   # ];
@@ -47,9 +47,12 @@
     ".config/mako".source = ./dotfiles/mako;
     ".config/wofi".source = ./dotfiles/wofi;
 
+    # enable wayland support beekeeper-studio
+    # ".config/bks-flags.conf".source = ./dotfiles/beekeeper-studio/bks-flags.conf;
+
     ".config/foot".source = ./dotfiles/foot;
     ".config/wezterm/wezterm.lua".source = ./dotfiles/wezterm/wezterm.lua;
-    ".config/wezterm/keybindings-mac.lua".source = ./dotfiles/wezterm/keybindings-mac.lua;
+    #".config/wezterm/keybindings-mac.lua".source = ./dotfiles/wezterm/keybindings-mac.lua;
 
     ".config/gtk-3.0".source = ./dotfiles/gtk-3.0;
     ".config/gtk-4.0".source = ./dotfiles/gtk-4.0;

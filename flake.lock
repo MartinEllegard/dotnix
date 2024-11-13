@@ -46,11 +46,11 @@
     "shared-flake": {
       "flake": false,
       "locked": {
-        "lastModified": 1731278045,
-        "narHash": "sha256-Zsff4xLVXo0Hr5ANVJBp7BTLreAuPWAMSph4JsjRbkg=",
+        "lastModified": 1731507996,
+        "narHash": "sha256-eZNREkHJjHvnh04rlO1WNnAEtVevZWsYYb+7IJTOf8M=",
         "owner": "MartinEllegard",
         "repo": "home-manager-shared",
-        "rev": "86066c479e343ff3e3502f57148ef504cbf34fcd",
+        "rev": "33286065c6810accd8ca649a663f8fc872909bc3",
         "type": "github"
       },
       "original": {
